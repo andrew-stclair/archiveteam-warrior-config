@@ -90,7 +90,7 @@ services:
         stop_grace_period: 5m
         environment:
             DOWNLOADER: St0ner1995
-            SELECTED_PROJECT: gfycat
+            SELECTED_PROJECT: gfycat2
             CONCURRENT_ITEMS: 6
         labels:
             - com.centurylinklabs.watchtower.enable=true
