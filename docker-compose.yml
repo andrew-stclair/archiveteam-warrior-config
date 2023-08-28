@@ -84,6 +84,34 @@ services:
             - '8006:8001'
         image: atdr.meo.ws/archiveteam/warrior-dockerfile
 
+    warrior_reddit1:
+        restart: unless-stopped
+        stop_signal: SIGINT
+        stop_grace_period: 5m
+        environment:
+            DOWNLOADER: St0ner1995
+            SELECTED_PROJECT: reddit
+            CONCURRENT_ITEMS: 6
+        labels:
+            - com.centurylinklabs.watchtower.enable=true
+        ports:
+            - '8011:8001'
+        image: atdr.meo.ws/archiveteam/warrior-dockerfile
+
+    warrior_reddit2:
+        restart: unless-stopped
+        stop_signal: SIGINT
+        stop_grace_period: 5m
+        environment:
+            DOWNLOADER: St0ner1995
+            SELECTED_PROJECT: reddit
+            CONCURRENT_ITEMS: 6
+        labels:
+            - com.centurylinklabs.watchtower.enable=true
+        ports:
+            - '8012:8001'
+        image: atdr.meo.ws/archiveteam/warrior-dockerfile
+
     warrior_gfycat1:
         restart: unless-stopped
         stop_signal: SIGINT
@@ -95,5 +123,5 @@ services:
         labels:
             - com.centurylinklabs.watchtower.enable=true
         ports:
-            - '8011:8001'
+            - '8021:8001'
         image: atdr.meo.ws/archiveteam/warrior-dockerfile
